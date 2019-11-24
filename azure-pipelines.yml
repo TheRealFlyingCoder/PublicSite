@@ -20,6 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- task: CopyFiles
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs: 
     pathtoPublish: $(build.artifactstagingdirectory)
