@@ -19,10 +19,13 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  
+- script: |
+    zip -r result.zip . -x .git/**\* > /dev/null
+  displayName: 'package results'
+
 - task: PublishBuildArtifacts@1
-  inputs: 
-    pathtoPublish: $(Build.artifactstagingdirectory)
+  inputs:
+    pathtoPublish: '$(Build.SourcesDirectory)/result.zip' 
+    artifactName: 'drop' 
+  displayName: 'upload artifacts'
