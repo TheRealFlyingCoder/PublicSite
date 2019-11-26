@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple react PWA, with emotion.js for styling",
   "main": "index.js",
+  "homepage": "index.html",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
