@@ -21,9 +21,10 @@ steps:
   displayName: 'npm install and build'
 - task: DeleteFiles@1
   inputs:
-    SourceFolder: 'node_modules'
-    Contents: '*'
-    RemoveSourceFolder: true
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: |
+      node_modules
+      src
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.SourcesDirectory)' 
