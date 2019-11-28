@@ -30,7 +30,7 @@ export default () => {
         <div css={HomeStyles}>
             <div className="content">
                 <img src={Logo} />
-                <h1>The Flying Coder</h1>
+                <h1>The Flying Coder's Public Site</h1>
             </div>
         </div>
     )
