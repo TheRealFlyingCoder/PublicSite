@@ -2,7 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 /** @jsx jsx */
 import { jsx, css, Global } from "@emotion/core";
-import AppStyles from "./styles/Global.styles";
+import AppStyles from "./App.styles";
 import { StateProvider } from "./StateProvider";
 import routes from './routes';
 import "./assets/favicon.ico";

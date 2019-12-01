@@ -6,7 +6,11 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 module.exports = {
   entry: './src/index.js',
   resolve: {
-    extensions: ['.js', 'jsx']
+    extensions: ['.js', 'jsx'],
+    alias: {
+      Theme: path.join(__dirname, '/src/theme/Theme.js'),
+      Assets: path.join(__dirname, '/src/assets'),
+    }
   },
   output: {
     path: path.join(__dirname, '/build'),
