@@ -7,6 +7,16 @@ export default {
         primary: "Roboto, sans-serif",
         secondary: "Open Sans, sans-serif",
     },
+    standard: css`
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 10px;
+        }
+    `,
     sizes: {
         desktop: css`
             h1 {

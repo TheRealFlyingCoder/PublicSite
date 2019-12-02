@@ -5,16 +5,20 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  mode: 'development',
+  devtool: 'inline-source-map',
   resolve: {
     extensions: ['.js', 'jsx'],
     alias: {
       Theme: path.join(__dirname, '/src/theme/Theme.js'),
       Assets: path.join(__dirname, '/src/assets'),
+      Components: path.join(__dirname, '/src/components'),
     }
   },
   output: {
     path: path.join(__dirname, '/build'),
-    filename: '[name].[hash].js'
+    filename: '[name].[hash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -39,5 +43,8 @@ module.exports = {
       favicon: './src/assets/favicon.ico'
     }),
     new ManifestPlugin()
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+  }
 }
