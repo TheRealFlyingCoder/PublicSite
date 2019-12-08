@@ -11,8 +11,8 @@ export default () => {
       subtitle="Massive undertaking in progress"
       image={Logo}
     >
-      <Button link="/roadmap" isPrimary>
-        Explore the roadmap
+      <Button link="/eminence" isPrimary>
+        See what's in store
       </Button>
     </Card>
   );

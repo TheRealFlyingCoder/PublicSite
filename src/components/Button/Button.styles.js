@@ -45,23 +45,36 @@ const Styles = {
     }
   `,
   Button: css`
-    display: inline-block;
+    display: block;
     color: white;
     border-radius: 5px;
-    padding: 1em;
-    margin: 1em;
+    border: none;
+    padding: 5px 10px;
 
     &.primary{
       background-color: ${Theme.colours.primary};
+      &:hover {
+        background-color: ${Theme.colours.primaryDark};
+      }
+
+      &:active {
+        background-color: ${Theme.colours.primaryLight};
+      }
     }
 
-    &:hover {
-      background-color: ${Theme.colours.primaryDark};
+    &.secondary {
+      background-color: ${Theme.colours.secondary};
+      color: black;
+      &:hover {
+        background-color: ${Theme.colours.secondaryDark};
+      }
+
+      &:active {
+        background-color: ${Theme.colours.secondaryLight};
+      }
     }
 
-    &:active {
-      background-color: ${Theme.colours.primaryLight};
-    }
+    
   `
 };
 

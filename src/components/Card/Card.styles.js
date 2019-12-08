@@ -40,12 +40,7 @@ const Styles = css`
 
     button.back {
       top: 5px;
-      left: 5px;
-      background-color: ${Theme.colours.secondary};
-      padding: 5px 10px;
-      border-radius: 5px;
-      display: block;
-      border: none;
+      left: 5px;      
 
       ${Theme.icons.before(Theme.icons.arrow.left)};
     }

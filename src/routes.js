@@ -1,5 +1,5 @@
 import Home from './pages/Home';
-import Roadmap from './pages/Roadmap';
+import Eminence from './pages/Eminence';
 
 export default [
     {
@@ -8,8 +8,8 @@ export default [
         component: Home
     },
     {
-        path: '/roadmap',
+        path: '/eminence',
         exact: true,
-        component: Roadmap
+        component: Eminence
     },
 ];
